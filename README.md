@@ -21,10 +21,12 @@ the steps to setup Moesif Middleware. But here is the key file where the Moesif 
 application id obtained from Moesif.
 
   ```csharp
-  moesifOptions = {
-    'ApplicationId': 'Your Application ID Found in Settings on Moesif',
-    ...
-  }
+  Dictionary<string, object> moesifOptions = new Dictionary<string, object>
+        {
+            {"ApplicationId", 'Your Application ID Found in Settings on Moesif'},
+            {"LogBody", true},
+            ...
+        }
   ```
 
 3. See `EmployeeController.cs` for some urls that you can hit the server with
