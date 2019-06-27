@@ -83,6 +83,8 @@ namespace MoesifMiddlewareExample.Settings
         {
             {"ApplicationId", "Your Application ID Found in Settings on Moesif"},
             {"LocalDebug", true},
+            {"LogBody", true},
+            {"LogBodyOutgoing", true},
             {"ApiVersion", "1.1.0"},
             {"IdentifyUser", IdentifyUser},
             {"IdentifyCompany", IdentifyCompany},
