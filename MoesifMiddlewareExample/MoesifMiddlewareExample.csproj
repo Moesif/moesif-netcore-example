@@ -12,8 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
-    <PackageReference Include="Moesif.Middleware" Version="0.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="$(AspNetCoreAllRuntimeFrameworkVersion)"><IsImplicitlyDefined>true</IsImplicitlyDefined>
+<PrivateAssets>All</PrivateAssets>
+<Publish>true</Publish>
+</PackageReference>
+    <PackageReference Include="Moesif.Middleware" Version="1.0.1" />
   </ItemGroup>
 
 </Project>
