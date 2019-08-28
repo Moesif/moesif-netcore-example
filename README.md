@@ -1,7 +1,6 @@
 # Moesif .NET Example
 
-[Moesif](https://www.moesif.com) is an API analytics platform. [Moesif.Middleware](https://github.com/Moesif/moesif-dotnet)
-is a middleware that makes integration with Moesif easy for .NET applications.
+[Moesif](https://www.moesif.com) is an API analytics and monitoring platform. [Moesif.Middleware](https://github.com/Moesif/moesif-dotnet) is a middleware that makes integration with Moesif easy for .NET applications.
 
 This is an example of .NET application with Moesif integrated.
 
@@ -17,8 +16,14 @@ the steps to setup Moesif Middleware. But here is the key file where the Moesif 
 
 1. Install Moesif Middleware if you haven't done so. `Install-Package Moesif.Middleware`
 
-2. Be sure to edit the `Settings/MoesifOptions.cs` to change the application id to your
-application id obtained from Moesif.
+2. Be sure to edit the `Settings/MoesifOptions.cs` to add your Moesif Application Id.
+
+Your Moesif Application Id can be found in the [_Moesif Portal_](https://www.moesif.com/).
+After signing up for a Moesif account, your Moesif Application Id will be displayed during the onboarding steps. 
+
+You can always find your Moesif Application Id at any time by logging 
+into the [_Moesif Portal_](https://www.moesif.com/), click on the top right menu,
+and then clicking _Installation_.
 
   ```csharp
   Dictionary<string, object> moesifOptions = new Dictionary<string, object>
