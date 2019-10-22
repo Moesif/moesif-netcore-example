@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using MoesifMiddlewareExample.Models;
+using MoesifNetCore2Example.Models;
 
-namespace MoesifMiddlewareExample.Controllers
+namespace MoesifNetCore2Example.Controllers
 {
     [Route("api/[controller]")]
     public class EmployeeController : ControllerBase

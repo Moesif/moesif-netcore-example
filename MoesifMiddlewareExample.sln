@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoesifMiddlewareExample", "MoesifMiddlewareExample\MoesifMiddlewareExample.csproj", "{8828BD88-7553-43C2-8333-70A1B72CA101}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoesifNetCore2Example", "MoesifNetCore2Example\MoesifNetCore2Example.csproj", "{8828BD88-7553-43C2-8333-70A1B72CA101}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoesifNetCore3Example", "MoesifNetCore3Example\MoesifNetCore3Example.csproj", "{9ED3C5E3-96AC-46B5-8D7E-FD45F01A15E2}"
 EndProject

@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "MoesifMiddlewareExample": {
+    "MoesifNetCore2Example": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

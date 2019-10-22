@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MoesifMiddlewareExample.Models
+namespace MoesifNetCore2Example.Models
 {
     public class Employee
     {

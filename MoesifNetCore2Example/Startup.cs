@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Moesif.Middleware;
-using MoesifMiddlewareExample.Settings;
+using MoesifNetCore2Example.Settings;
 
-namespace MoesifMiddlewareExample
+namespace MoesifNetCore2Example
 {
     public class Startup
     {
