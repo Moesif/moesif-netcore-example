@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace MoesifMiddlewareExample
+namespace MoesifNetCore2Example
 {
     public class Program
     {

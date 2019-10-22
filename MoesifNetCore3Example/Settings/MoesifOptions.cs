@@ -1,12 +1,11 @@
 ﻿using System;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Internal;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http.Extensions;
 using Moesif.Api.Models;
 using System.Net.Http;
 
-namespace MoesifMiddlewareExample.Settings
+namespace MoesifNetCore3Example.Settings
 {
     public class MoesifOptions
     {
