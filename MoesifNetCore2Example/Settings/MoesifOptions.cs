@@ -94,7 +94,9 @@ namespace MoesifNetCore2Example.Settings
             {"GetSessionTokenOutgoing", GetSessionTokenOutgoing},
             {"IdentifyUserOutgoing", IdentifyUserOutgoing},
             {"IdentifyCompanyOutgoing", IdentifyCompanyOutgoing},
-            {"GetMetadataOutgoing", GetMetadataOutgoing}
+            {"GetMetadataOutgoing", GetMetadataOutgoing},
+            {"EnableBatching", false},
+            {"BatchSize", 25}
         };
     }
 }

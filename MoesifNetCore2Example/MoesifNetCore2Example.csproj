@@ -16,7 +16,7 @@
 <PrivateAssets>all</PrivateAssets>
 <Publish>true</Publish>
 </PackageReference>
-    <PackageReference Include="Moesif.Middleware" Version="1.0.3" />
+    <PackageReference Include="Moesif.Middleware" Version="1.1.0" />
   </ItemGroup>
 
 </Project>
