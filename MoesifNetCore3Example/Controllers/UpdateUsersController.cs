@@ -14,7 +14,7 @@ namespace MoesifNetCore3Example.Controllers
     [Route("api/users")]
     public class UpdateUsersController : ControllerBase
     {
-        public MoesifMiddleware moesifMiddleware = new MoesifMiddleware(next: (innerHttpContext) => Task.FromResult(0), _middleware: MoesifOptions.moesifOptions);
+        public MoesifMiddleware moesifMiddleware = new MoesifMiddleware(MoesifOptions.moesifOptions);
 
         [HttpPost("{id}")]
         public IActionResult UpdateUserWithID(string id)

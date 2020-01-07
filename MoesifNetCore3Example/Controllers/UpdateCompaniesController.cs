@@ -14,7 +14,7 @@ namespace MoesifNetCore3Example.Controllers
     [Route("api/companies")]
     public class UpdateCompaniesController : ControllerBase
     {
-        public MoesifMiddleware moesifMiddleware = new MoesifMiddleware(next: (innerHttpContext) => Task.FromResult(0), _middleware: MoesifOptions.moesifOptions);
+        public MoesifMiddleware moesifMiddleware = new MoesifMiddleware(MoesifOptions.moesifOptions);
 
         [HttpPost("{id}")]
         public IActionResult UpdateCompaniesWithID(string id)
@@ -37,7 +37,7 @@ namespace MoesifNetCore3Example.Controllers
                 {"plan_name", "Free"},
                 {"deal_stage", "Lead"},
                 {"mrr", 24000},
-                {"demographics", new Dictionary<string, int> {
+                {"demographics", new Dictionary<string, object> {
                         {"alexa_ranking", 500000},
                         {"employee_count", 47}
                     }
