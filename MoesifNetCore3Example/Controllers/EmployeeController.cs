@@ -25,5 +25,20 @@ namespace MoesifNetCore3Example.Controllers
 
             return Ok(employee);
         }
+
+
+        [HttpPost]
+        public IActionResult Post()
+        {
+            var employee = new Employee()
+            {
+                ID = 1234,
+                FirstName = "firstName",
+                LastName = "lastName",
+                DateOfBirth = DateTime.Now.AddYears(-30)
+            };
+
+            return Ok(employee);
+        }
     }
 }
