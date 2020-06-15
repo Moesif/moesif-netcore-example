@@ -25,15 +25,8 @@ namespace MoesifNetCore2Example.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post()
+        public IActionResult Post([FromBody]  Employee employee)
         {
-            var employee = new Employee()
-            {
-                ID = 1234,
-                FirstName = "firstName",
-                LastName = "lastName",
-                DateOfBirth = DateTime.Now.AddYears(-30)
-            };
 
             return Ok(employee);
         }

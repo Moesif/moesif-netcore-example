@@ -2,7 +2,7 @@
 
 [Moesif](https://www.moesif.com) is an API analytics and monitoring platform. [Moesif.Middleware](https://github.com/Moesif/moesif-dotnet) is a middleware that makes integration with Moesif easy for .NET applications.
 
-This is an example of .NET application with Moesif integrated.
+This is an example of .NET core application with Moesif integrated.
 
 ## Key files
 
@@ -34,6 +34,21 @@ and then clicking _Installation_.
         }
   ```
 
-3. See `EmployeeController.cs` for some urls that you can hit the server with
-(e.g. `http://localhost:5000/api/employee/42`), and the data
-should be captured in the corresponding Moesif account of the application id.
+3. See `EmployeeController.cs` for some sample URLs that you can test such as the below GET:
+
+```
+GET http://localhost:55556/api/employee/42
+```
+
+You can also try a POST request:
+
+```
+POST http://localhost:55556/api/employee/
+{
+    "id": 123,
+    "firstName": "first",
+    "lastName": "last",
+    "dateOfBirth": "0001-01-01T00:00:00"
+}
+```
+The sample API calls should be logged to Moesif. 
