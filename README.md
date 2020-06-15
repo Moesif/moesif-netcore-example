@@ -1,8 +1,8 @@
-# Moesif .NET Example
+# Moesif .NET Core Example
 
 [Moesif](https://www.moesif.com) is an API analytics and monitoring platform. [Moesif.Middleware](https://github.com/Moesif/moesif-dotnet) is a middleware that makes integration with Moesif easy for .NET applications.
 
-This is an example of .NET core application with Moesif integrated.
+This is an example of .NET Core application with Moesif integrated.
 
 ## Key files
 
