@@ -36,14 +36,16 @@ and then clicking _Installation_.
 
 3. See `EmployeeController.cs` for some sample URLs that you can test such as the below GET:
 
+Replace the port 5000 with the actual port your app is running on
+
 ```
-GET http://localhost:55556/api/employee/42
+GET http://localhost:5000/api/employee/42
 ```
 
 You can also try a POST request:
 
 ```
-POST http://localhost:55556/api/employee/
+POST http://localhost:5000/api/employee/
 {
     "id": 123,
     "firstName": "first",
