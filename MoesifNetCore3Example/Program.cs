@@ -20,7 +20,10 @@ namespace MoesifNetCore3Example
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseStartup<Startup>()
+                    .ConfigureKestrel((context, options) => {
+                        options.AllowSynchronousIO = true;
+                    });
                 });
     }
 }
