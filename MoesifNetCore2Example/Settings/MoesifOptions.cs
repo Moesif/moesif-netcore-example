@@ -62,7 +62,7 @@ namespace MoesifNetCore2Example.Settings
             {"GetSessionToken", GetSessionToken},
             {"GetMetadata", GetMetadata},
             {"GetMetadataOutgoing", GetMetadataOutgoing},
-            {"EnableBatching", false},
+            {"EnableBatching", true},
             {"BatchSize", 25}
         };
     }
