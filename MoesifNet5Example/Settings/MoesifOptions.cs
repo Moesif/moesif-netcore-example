@@ -4,16 +4,16 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Microsoft.Extensions.Configuration;
 
-namespace MoesifNetCore3Example.Settings
+namespace MoesifNet5Example.Settings
 {
     public class MoesifOptions
     {
-    private readonly IConfiguration _config;
+        private readonly IConfiguration _config;
 
-    public MoesifOptions(IConfiguration config)
-    {
-        _config = config;
-    }
+        public MoesifOptions(IConfiguration config)
+        {
+            _config = config;
+        }
         public static Func<HttpRequest, HttpResponse, string> IdentifyUser = (HttpRequest req, HttpResponse res) => {
             // Implement your custom logic to return user id
             return req.HttpContext?.User?.Identity?.Name;
@@ -72,7 +72,7 @@ namespace MoesifNetCore3Example.Settings
                 {MoesifOptionsParamNames.GetMetadata, GetMetadata},
                 {MoesifOptionsParamNames.GetMetadataOutgoing, GetMetadataOutgoing}
             };
-        return moesifOptions;
+            return moesifOptions;
         }
 
         public string getConfigString(string paramName)
@@ -96,7 +96,7 @@ namespace MoesifNetCore3Example.Settings
                 appId = (string) getMoesifOptions().GetValueOrDefault(MoesifOptionsParamNames.ApplicationId);
             }
             catch (Exception ex){
-                Console.WriteLine("Error Reading Moesif Application Id in appsettings(.env).json : " + ex.Message );
+                Console.WriteLine("Error Reading Moesif Application Id in appsettings(.env).json: " + ex.Message );
             }
             return !string.IsNullOrWhiteSpace(appId) && !appId.StartsWith("<");
         }
