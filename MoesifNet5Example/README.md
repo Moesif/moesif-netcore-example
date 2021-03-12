@@ -41,6 +41,15 @@ Hello World!
 ```
 Now browse to your [Moesif](https://www.moesif.com) portal and the events should appear there shortly.
 
+### Troubleshooting:
+* If you see errors such as `Synchronous operations are disallowed. Call Read/Write/FlushAsync or set AllowSynchrnousIO to true instead.`
+Look at [Github aspnetcore announcement](https://github.com/dotnet/aspnetcore/issues/7644) for possible workarounds such as 
+```C#
+public void ConfigureServices(IServiceCollection services)
+{
+    services.Configure<IISServerOptions>(options => { options.AllowSynchronousIO = true;});
+}
+```
 
 ## To modify this sample in VS Code
 
