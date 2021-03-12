@@ -6,10 +6,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Moesif.Middleware;
-using MoesifNetCore3Example.Settings;
+using MoesifNet5Example.Settings;
 using Microsoft.AspNetCore.Routing;
 
-namespace MoesifNetCore3Example
+namespace MoesifNet5Example
 {
     public class Startup
     {
@@ -54,7 +54,8 @@ namespace MoesifNetCore3Example
 
         public static void ensureValidConfig(MoesifOptions mo)
         {
-            if (!mo.isConfiguredMoesifApplicationId()){
+            if (!mo.isConfiguredMoesifApplicationId())
+            {
                 string msg = "Error: Moesif: " + MoesifOptionsParamNames.ApplicationId + " not valid - usually in appsettings(.env).json";
                 Console.WriteLine(msg);
                 throw new ArgumentException(msg);
