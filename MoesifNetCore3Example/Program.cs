@@ -22,6 +22,7 @@ namespace MoesifNetCore3Example
                 {
                     webBuilder.UseStartup<Startup>()
                     .ConfigureKestrel((context, options) => {
+                        // Incase if want to use options.AllowSynchronousIO = false; please refer to Student controller endpoints
                         options.AllowSynchronousIO = true;
                     });
                 });
