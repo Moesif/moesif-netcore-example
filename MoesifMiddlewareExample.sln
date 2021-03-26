@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoesifNetCore3Example", "Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoesifNetCore2Example", "MoesifNetCore2Example\MoesifNetCore2Example.csproj", "{836C1D42-EC53-4E93-94BC-CA0234B81FA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoesifNet5Example", "MoesifNet5Example\MoesifNet5Example.csproj", "{396395CE-5E2F-4BDA-AE37-8DC4A60546A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +21,9 @@ Global
 		{836C1D42-EC53-4E93-94BC-CA0234B81FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{836C1D42-EC53-4E93-94BC-CA0234B81FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{836C1D42-EC53-4E93-94BC-CA0234B81FA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{396395CE-5E2F-4BDA-AE37-8DC4A60546A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{396395CE-5E2F-4BDA-AE37-8DC4A60546A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{396395CE-5E2F-4BDA-AE37-8DC4A60546A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{396395CE-5E2F-4BDA-AE37-8DC4A60546A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
