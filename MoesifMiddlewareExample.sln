@@ -1,11 +1,11 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoesifNetCore3Example", "MoesifNetCore3Example\MoesifNetCore3Example.csproj", "{9ED3C5E3-96AC-46B5-8D7E-FD45F01A15E2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoesifNetCore2Example", "MoesifNetCore2Example\MoesifNetCore2Example.csproj", "{836C1D42-EC53-4E93-94BC-CA0234B81FA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoesifNet5Example", "MoesifNet5Example\MoesifNet5Example.csproj", "{396395CE-5E2F-4BDA-AE37-8DC4A60546A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoesifNetCore3Example", "MoesifNetCore3Example\MoesifNetCore3Example.csproj", "{E7F50E4B-8270-43CC-8470-633542583B17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoesifNet5Example", "MoesifNet5Example\MoesifNet5Example.csproj", "{C3A7293C-E822-42A5-ACE4-061242842066}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,17 +13,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9ED3C5E3-96AC-46B5-8D7E-FD45F01A15E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9ED3C5E3-96AC-46B5-8D7E-FD45F01A15E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9ED3C5E3-96AC-46B5-8D7E-FD45F01A15E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9ED3C5E3-96AC-46B5-8D7E-FD45F01A15E2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{836C1D42-EC53-4E93-94BC-CA0234B81FA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{836C1D42-EC53-4E93-94BC-CA0234B81FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{836C1D42-EC53-4E93-94BC-CA0234B81FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{836C1D42-EC53-4E93-94BC-CA0234B81FA0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{396395CE-5E2F-4BDA-AE37-8DC4A60546A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{396395CE-5E2F-4BDA-AE37-8DC4A60546A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{396395CE-5E2F-4BDA-AE37-8DC4A60546A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{396395CE-5E2F-4BDA-AE37-8DC4A60546A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7F50E4B-8270-43CC-8470-633542583B17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7F50E4B-8270-43CC-8470-633542583B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7F50E4B-8270-43CC-8470-633542583B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7F50E4B-8270-43CC-8470-633542583B17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3A7293C-E822-42A5-ACE4-061242842066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3A7293C-E822-42A5-ACE4-061242842066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3A7293C-E822-42A5-ACE4-061242842066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3A7293C-E822-42A5-ACE4-061242842066}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
