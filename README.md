@@ -7,6 +7,7 @@ Each of these Examples are independent of each other
 
 |  |  |
 |--|--|
+| MoesifNet6Example | .Net 6.0 | 
 | MoesifNet5Example | .Net 5.0 | 
 | MoesifNetCore3Example | .Net Core 3.0 |
 | MoesifNetCore2Example | .Net Core 2.0 |

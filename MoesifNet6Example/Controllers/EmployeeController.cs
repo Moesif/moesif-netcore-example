@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
-using MoesifNet5Example.Models;
+using MoesifNet6Example.Models;
 
-namespace MoesifNet5Example.Controllers
+namespace MoesifNet6Example.Controllers
 {
     [Route("api/[controller]")]
     public class EmployeeController : ControllerBase

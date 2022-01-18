@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Microsoft.Extensions.Configuration;
 
-namespace MoesifNet5Example.Settings
+namespace MoesifNet6Example.Settings
 {
     public class MoesifOptions
     {

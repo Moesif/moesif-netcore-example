@@ -6,10 +6,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Moesif.Middleware;
-using MoesifNet5Example.Settings;
+using MoesifNet6Example.Settings;
 using Microsoft.AspNetCore.Routing;
 
-namespace MoesifNet5Example
+namespace MoesifNet6Example
 {
     public class Startup
     {

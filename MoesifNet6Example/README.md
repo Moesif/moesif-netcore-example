@@ -61,4 +61,4 @@ This project can be opened in Free [Microsoft Visual Studio Code](https://code.v
 
 * Because this folder contains `.devcontainer` VS Code will prompt if you would like to re-open this project within a container. Select `Yes`.
 
-This sample has been tested using Official Microsoft Docker container `mcr.microsoft.com/vscode/devcontainers/dotnetcore` version 6.0-bullseye - which utilizes `Ubuntu 20.04` as a base image.
+This sample has been tested using Official Microsoft Docker container `mcr.microsoft.com/vscode/devcontainers/dotnetcore` version 6.0-bullseye - which utilizes `Debian` as a base image.
