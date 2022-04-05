@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using MoesifNetCore3Example.Models;
+using System.Text.Json;
+
 
 namespace MoesifNetCore3Example.Controllers
 {
@@ -23,7 +25,9 @@ namespace MoesifNetCore3Example.Controllers
                 DateOfBirth = DateTime.Now.AddYears(-30)
             };
 
-            return Ok(employee);
+            string jsonString = JsonSerializer.Serialize(employee);
+
+            return Ok(jsonString);
         }
 
 
@@ -32,6 +36,26 @@ namespace MoesifNetCore3Example.Controllers
         {
 
             return Ok(employee);
+        }
+
+        [HttpPost("batch")]
+        public IActionResult Post([FromBody] List<Employee> employee)
+        {
+
+            string jsonString = JsonSerializer.Serialize(employee);
+            return Ok(jsonString);
+        }
+
+        [HttpPost("xml/{value}")]
+        public ContentResult GetXml(string value)
+        {
+            var xml = $"<result><value>{value}</value></result>";
+            return new ContentResult
+            {
+                Content = xml,
+                ContentType = "application/xml",
+                StatusCode = 200
+            };
         }
     }
 }
