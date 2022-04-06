@@ -8,6 +8,8 @@ using Microsoft.Extensions.Hosting;
 using Moesif.Middleware;
 using MoesifNetCore3Example.Settings;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.AspNetCore.Diagnostics;
+using System.Net;
 
 namespace MoesifNetCore3Example
 {
@@ -26,7 +28,7 @@ namespace MoesifNetCore3Example
             services.AddMvc();
             services.Configure<IISServerOptions>(options =>
             {
-                    options.AllowSynchronousIO = true;
+                options.AllowSynchronousIO = true;
             });
         }
 
@@ -38,11 +40,31 @@ namespace MoesifNetCore3Example
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
             MoesifOptions mo = new MoesifOptions(Configuration);
             ensureValidConfig(mo);
             app.UseMiddleware<MoesifMiddleware>(mo.getMoesifOptions());
 
+
+            app.UseExceptionHandler(errorApp =>
+            {
+                errorApp.Run(async context =>
+                {
+                    context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                    context.Response.ContentType = "application/json";
+
+                    var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
+                    if (contextFeature != null)
+                    {
+                        await context.Response.WriteAsync(new ExceptionInfo()
+                        {
+                            StatusCode = context.Response.StatusCode,
+                            Message = "Internal Server Error."
+                        }.ToString());
+                    }
+                });
+            });
+
+            app.UseRouting();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>
