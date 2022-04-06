@@ -47,5 +47,13 @@ namespace MoesifNetCore3Example.Controllers
             // Return the status
             return Ok();
         }
+
+        [HttpGet("async/{id}")]
+        public async Task<Student> GetStudent(int id)
+        {
+            var t1 = Task.Run(() => GetStudentAsync(id));
+            await t1;
+            return t1.Result;
+        }
     }
 }
