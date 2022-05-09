@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using System.Net.Http;
 using Microsoft.Extensions.Configuration;
+using Moesif.Api.Models;
 
 namespace MoesifNetCore3Example.Settings
 {
@@ -21,6 +22,18 @@ namespace MoesifNetCore3Example.Settings
 
         public static Func<HttpRequest, HttpResponse, string> IdentifyCompany = (HttpRequest req, HttpResponse res) => {
             return req.Headers["X-Organization-Id"];
+        };
+
+        public static Func<EventModel, EventModel> MaskEventModel = (EventModel moesifEvent) =>
+        {
+            Dictionary<String, String> eventRequestHeaders = moesifEvent.Request.Headers;
+            bool keyExists = eventRequestHeaders.ContainsKey("Authorization");
+            if (keyExists)
+            {
+                eventRequestHeaders.Remove("Authorization");
+            };
+
+            return moesifEvent;
         };
 
         public static Func<HttpRequest, HttpResponse, string> GetSessionToken = (HttpRequest req, HttpResponse res) => {
@@ -70,7 +83,8 @@ namespace MoesifNetCore3Example.Settings
                 {MoesifOptionsParamNames.IdentifyCompany, IdentifyCompany},
                 {MoesifOptionsParamNames.GetSessionToken, GetSessionToken},
                 {MoesifOptionsParamNames.GetMetadata, GetMetadata},
-                {MoesifOptionsParamNames.GetMetadataOutgoing, GetMetadataOutgoing}
+                {MoesifOptionsParamNames.GetMetadataOutgoing, GetMetadataOutgoing},
+                {MoesifOptionsParamNames.MaskEventModel, MaskEventModel}
             };
         return moesifOptions;
         }
@@ -126,6 +140,7 @@ namespace MoesifNetCore3Example.Settings
         public static string GetSessionToken = "GetSessionToken";
         public static string GetMetadata = "GetMetadata";
         public static string GetMetadataOutgoing = "GetMetadataOutgoing";
+        public static string MaskEventModel = "MaskEventModel";
 
         public static string asKey(string suffix)
         {
