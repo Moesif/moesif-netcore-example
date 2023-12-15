@@ -1,8 +1,8 @@
-# Moesif .Net 6 Example
+# Moesif .Net 8 Example
 
 Important: `appsettings.json` is required to be updated. Please ensure `MoesifOptions` `ApplicationId` is updated in this file, without which this app will fail.
 
-### To build this project using dotnet 6
+### To build this project using dotnet 8
 
 Navigate to `MoesifNet8Example` folder in this repo
 
@@ -61,4 +61,4 @@ This project can be opened in Free [Microsoft Visual Studio Code](https://code.v
 
 * Because this folder contains `.devcontainer` VS Code will prompt if you would like to re-open this project within a container. Select `Yes`.
 
-This sample has been tested using Official Microsoft Docker container `mcr.microsoft.com/vscode/devcontainers/dotnetcore` version 6.0-bullseye - which utilizes `Debian` as a base image.
+This sample has been tested using Official Microsoft Docker container `mcr.microsoft.com/vscode/devcontainers/dotnetcore` version 8.0-bullseye - which utilizes `Debian` as a base image.
