@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "MoesifNet6Example": {
+    "MoesifNet8Example": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

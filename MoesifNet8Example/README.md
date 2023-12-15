@@ -4,7 +4,7 @@ Important: `appsettings.json` is required to be updated. Please ensure `MoesifOp
 
 ### To build this project using dotnet 6
 
-Navigate to `MoesifNet6Example` folder in this repo
+Navigate to `MoesifNet8Example` folder in this repo
 
 ```sh
 dotnet clean
@@ -13,12 +13,12 @@ dotnet build
 
 ### To run the sample after building it
 
-Navigate to `MoesifNet6Example` folder in this repo
+Navigate to `MoesifNet8Example` folder in this repo
 * Ensure `appsettings.json` contains valid `MoesifOptions` > `ApplicationId`
 * Run the following command:
 
 ```sh
-bin/Debug/net6.0/MoesifNet6Example
+bin/Debug/net8.0/MoesifNet8Example
 ```
 
 Sample output"
@@ -32,7 +32,7 @@ info: Microsoft.Hosting.Lifetime[0]
 info: Microsoft.Hosting.Lifetime[0]
       Hosting environment: Production
 info: Microsoft.Hosting.Lifetime[0]
-      Content root path: /workspaces/moesif-netcore-example/MoesifNet6Example
+      Content root path: /workspaces/moesif-netcore-example/MoesifNet8Example
 ```
 Navigate your web browser to: `http://localhost:5000`
 You should see the message:

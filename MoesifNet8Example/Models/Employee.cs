@@ -1,5 +1,5 @@
 ﻿using System;
-namespace MoesifNet6Example.Models
+namespace MoesifNet8Example.Models
 {
     public class Employee
     {

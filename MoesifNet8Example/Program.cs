@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace MoesifNet6Example
+namespace MoesifNet8Example
 {
     public class Program
     {
