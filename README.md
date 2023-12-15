@@ -5,9 +5,10 @@
 The purpose of this project is to provide examples application with Moesif integrated.
 Each of these Examples are independent of each other
 
-|  |  |
-|--|--|
-| MoesifNet6Example | .Net 6.0 | 
+| Example | .NET Version  |
+| ------- | ------------- |
+| MoesifNet8Example | .Net 8.0 |
+| MoesifNet6Example | .Net 6.0 |
 | MoesifNet5Example | .Net 5.0 | 
 | MoesifNetCore3Example | .Net Core 3.0 |
 | MoesifNetCore2Example | .Net Core 2.0 |

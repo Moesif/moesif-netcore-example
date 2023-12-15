@@ -33,6 +33,7 @@ $RECYCLE.BIN/
 *.DS_Store
 .AppleDouble
 .LSOverride
+.debug
 
 # Icon must end with two \r
 Icon
