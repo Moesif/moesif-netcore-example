@@ -17,8 +17,8 @@
 </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
-    <PackageReference Include="Moesif.Api" Version="2.0.4" />
-    <PackageReference Include="Moesif.Middleware" Version="1.3.17" />
+    <PackageReference Include="Moesif.Api" Version="2.0.8" />
+    <PackageReference Include="Moesif.Middleware" Version="1.4.5" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
 
