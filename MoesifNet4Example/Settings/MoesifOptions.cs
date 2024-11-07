@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Microsoft.Extensions.Configuration;
 
-namespace MoesifNet6Example.Settings
+namespace MoesifNet5Example.Settings
 {
     public class MoesifOptions
     {
@@ -62,7 +62,6 @@ namespace MoesifNet6Example.Settings
                 {MoesifOptionsParamNames.ApplicationId, getConfigString(MoesifOptionsParamNames.ApplicationId)},
                 {MoesifOptionsParamNames.LocalDebug, getConfigBool(MoesifOptionsParamNames.LocalDebug)},
                 {MoesifOptionsParamNames.LogBody, getConfigBool(MoesifOptionsParamNames.LogBody)},
-                {MoesifOptionsParamNames.IsLambda, getConfigBool(MoesifOptionsParamNames.IsLambda)},
                 {MoesifOptionsParamNames.LogBodyOutgoing, getConfigBool(MoesifOptionsParamNames.LogBodyOutgoing)},
                 {MoesifOptionsParamNames.ApiVersion, getConfigString(MoesifOptionsParamNames.ApiVersion)},
                 {MoesifOptionsParamNames.EnableBatching, getConfigBool(MoesifOptionsParamNames.EnableBatching)},
@@ -113,10 +112,6 @@ namespace MoesifNet6Example.Settings
         public static string LocalDebug = "LocalDebug";
         // Read from appsettings.json
         public static string LogBody = "LogBody";
-
-        // Read from appsettings.json
-        public static string IsLambda = "IsLambda";
-
         // Read from appsettings.json
         public static string LogBodyOutgoing = "LogBodyOutgoing";
         // Read from appsettings.json
