@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -59,6 +60,19 @@ namespace MoesifNet6Example
                 string msg = "Error: Moesif: " + MoesifOptionsParamNames.ApplicationId + " not valid - usually in appsettings(.env).json";
                 Console.WriteLine(msg);
                 throw new ArgumentException(msg);
+            }
+            else
+            {
+                Console.WriteLine("MoesifOptions");
+                // PrintDictionaries(mo);
+            }
+        }
+
+        private static void PrintDictionaries(MoesifOptions mo)
+        {
+            foreach (var kvp in mo.getMoesifOptions())
+            {
+                Console.WriteLine($"Key = {kvp.Key}, Value = {kvp.Value.ToString()}");
             }
         }
     }

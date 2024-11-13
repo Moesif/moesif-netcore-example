@@ -12,6 +12,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoesifNet8Example", "Moesif
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoesifNet6Example", "MoesifNet6Example\MoesifNet6Example.csproj", "{F248B0AC-68C5-46F8-BA5D-9E275ADC4F08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moesif.Middleware", "..\moesif-dotnet\Moesif.Middleware\Moesif.Middleware.csproj", "{E440D91A-ED73-4B96-B866-44C988DA7FF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moesif.Api", "..\moesifapi-csharp\Moesif.Api\Moesif.Api.csproj", "{48358D79-5613-4563-9424-849A615C4068}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,14 @@ Global
 		{F248B0AC-68C5-46F8-BA5D-9E275ADC4F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F248B0AC-68C5-46F8-BA5D-9E275ADC4F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F248B0AC-68C5-46F8-BA5D-9E275ADC4F08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E440D91A-ED73-4B96-B866-44C988DA7FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E440D91A-ED73-4B96-B866-44C988DA7FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E440D91A-ED73-4B96-B866-44C988DA7FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E440D91A-ED73-4B96-B866-44C988DA7FF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48358D79-5613-4563-9424-849A615C4068}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48358D79-5613-4563-9424-849A615C4068}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48358D79-5613-4563-9424-849A615C4068}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48358D79-5613-4563-9424-849A615C4068}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
