@@ -62,8 +62,10 @@ namespace MoesifNet6Example.Settings
                 {MoesifOptionsParamNames.ApplicationId, getConfigString(MoesifOptionsParamNames.ApplicationId)},
                 {MoesifOptionsParamNames.LocalDebug, getConfigBool(MoesifOptionsParamNames.LocalDebug)},
                 {MoesifOptionsParamNames.LogBody, getConfigBool(MoesifOptionsParamNames.LogBody)},
-                {MoesifOptionsParamNames.IsLambda, getConfigBool(MoesifOptionsParamNames.IsLambda)},
                 {MoesifOptionsParamNames.LogBodyOutgoing, getConfigBool(MoesifOptionsParamNames.LogBodyOutgoing)},
+                {MoesifOptionsParamNames.RequestMaxBodySize, getConfigInt(MoesifOptionsParamNames.RequestMaxBodySize)},
+                {MoesifOptionsParamNames.ResponseMaxBodySize, getConfigInt(MoesifOptionsParamNames.ResponseMaxBodySize)},
+                {MoesifOptionsParamNames.IsLambda, getConfigBool(MoesifOptionsParamNames.IsLambda)},
                 {MoesifOptionsParamNames.ApiVersion, getConfigString(MoesifOptionsParamNames.ApiVersion)},
                 {MoesifOptionsParamNames.EnableBatching, getConfigBool(MoesifOptionsParamNames.EnableBatching)},
                 {MoesifOptionsParamNames.BatchSize, getConfigInt(MoesifOptionsParamNames.BatchSize)},
@@ -113,6 +115,8 @@ namespace MoesifNet6Example.Settings
         public static string LocalDebug = "LocalDebug";
         // Read from appsettings.json
         public static string LogBody = "LogBody";
+        public static string RequestMaxBodySize = "RequestMaxBodySize";
+        public static string ResponseMaxBodySize = "ResponseMaxBodySize";
 
         // Read from appsettings.json
         public static string IsLambda = "IsLambda";
