@@ -19,7 +19,7 @@ namespace MoesifNet6Example.Controllers
             {
                 ID = id,
                 FirstName = "firstName",
-                LastName = "lastName",
+                LastName = "Very Long LastName From Moesif for API Awesomeness of Moesif",
                 DateOfBirth = DateTime.Now.AddYears(-30)
             };
 
