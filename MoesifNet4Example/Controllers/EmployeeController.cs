@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
-using MoesifNet6Example.Models;
+using MoesifNet5Example.Models;
 
-namespace MoesifNet6Example.Controllers
+namespace MoesifNet5Example.Controllers
 {
     [Route("api/[controller]")]
     public class EmployeeController : ControllerBase
@@ -19,7 +19,7 @@ namespace MoesifNet6Example.Controllers
             {
                 ID = id,
                 FirstName = "firstName",
-                LastName = "Very Long LastName From Moesif for API Awesomeness of Moesif",
+                LastName = "lastName",
                 DateOfBirth = DateTime.Now.AddYears(-30)
             };
 

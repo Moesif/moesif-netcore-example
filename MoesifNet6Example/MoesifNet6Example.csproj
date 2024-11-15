@@ -4,13 +4,24 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="publish\" />
     <Folder Include="Settings\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Owin" Version="4.1.1" />
-    <PackageReference Include="Moesif.Middleware" Version="1.4.7" />
+    <PackageReference Include="Amazon.Lambda.APIGatewayEvents" Version="2.7.1" />
+    <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="9.0.0" />
+    <PackageReference Include="Amazon.Lambda.Core" Version="2.2.0" />
+    <PackageReference Include="Amazon.Lambda.RuntimeSupport" Version="1.10.0" />
+    <PackageReference Include="Microsoft.Owin" Version="4.2.2" /> 
+<!--    <PackageReference Include="Moesif.Middleware" Version="3.0.11"/>-->
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\moesif-dotnet\Moesif.Middleware\Moesif.Middleware.csproj">
+      <ReferenceSourceTarget></ReferenceSourceTarget>
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>
