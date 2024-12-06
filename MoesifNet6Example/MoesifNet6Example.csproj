@@ -15,8 +15,8 @@
     <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="9.0.0" />
     <PackageReference Include="Amazon.Lambda.Core" Version="2.2.0" />
     <PackageReference Include="Amazon.Lambda.RuntimeSupport" Version="1.10.0" />
-<!--    <PackageReference Include="Microsoft.Owin" Version="4.2.2" /> -->
-<!--    <PackageReference Include="Moesif.Middleware" Version="3.1.0"/>-->
+<!--    <PackageReference Include="Moesif.Api" Version="3.1.0" />-->
+<!--    <PackageReference Include="Moesif.Middleware" Version="3.1.1"/>-->
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
 
