@@ -2,6 +2,9 @@
 
 using System;
 using System.Collections.Generic;
+using System.Net;
+using System.Text.Json.Nodes;
+using Amazon.Lambda.APIGatewayEvents;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -34,9 +37,11 @@ namespace MoesifNet6Example
 #if MOESIF_INSTRUMENT
             Console.WriteLine($"Begin: Configure");
 #endif
+            var isLambda = false;
             MoesifOptions mo = new MoesifOptions(Configuration);
             ensureValidConfig(mo);
             app.UseMiddleware<MoesifMiddleware>(mo.getMoesifOptions());
+            isLambda = mo.IsLambda();
             
             if (env.IsDevelopment())
             {
@@ -51,9 +56,36 @@ namespace MoesifNet6Example
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    var msg = "Hello World!"; 
+                    var msg = $"Hello World! isLambd = {isLambda}"; 
                     Console.WriteLine($"Hit the home page: {msg}");
-                    await context.Response.WriteAsync(msg);
+                    // if (isLambda)
+                    // {
+                    //     var response = new APIGatewayProxyResponse
+                    //     {
+                    //         StatusCode = (int)HttpStatusCode.OK,
+                    //         Body = $"Welcome to Home! Request path: /",
+                    //         Headers = new Dictionary<string, string> { { "Content-Type", "text/json" } }
+                    //     };
+                    // }
+                    // else
+                    // {
+                    await context.Response.WriteAsync(new JsonObject
+                    {
+                        ["msg"] = msg,
+                        ["zipcode"] = 94709
+                    }.ToString());
+                    // }
+                });
+
+                endpoints.MapGet("/foo", async context =>
+                {
+                    // var hdrs = new Dictionary<string, string> { { "Content-Type", "text/json" } };
+                    var response = new JsonObject
+                    {
+                        ["StatusCode"] = (int)HttpStatusCode.OK,
+                        ["Body"] = $"Hello from Lambda! Request path: /foo"
+                    };
+                    await context.Response.WriteAsJsonAsync(response);
                 });
 
                 endpoints.MapControllerRoute(

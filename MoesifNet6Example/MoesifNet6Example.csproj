@@ -3,6 +3,14 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net6.0'">
+    <DefineConstants>NET6_0_OR_GREATER</DefineConstants>
+    <DefineConstants>NETCORE</DefineConstants>
+    <!-- IMPORTANT please comment following lines before release build/publish -->
+    <!--    <DefineConstants>MOESIF_INSTRUMENT</DefineConstants>-->
+  </PropertyGroup>
+  
   <ItemGroup>
     <Folder Include="publish\" />
     <Folder Include="Settings\" />
@@ -15,8 +23,8 @@
     <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="9.0.0" />
     <PackageReference Include="Amazon.Lambda.Core" Version="2.2.0" />
     <PackageReference Include="Amazon.Lambda.RuntimeSupport" Version="1.10.0" />
-<!--    <PackageReference Include="Moesif.Api" Version="3.1.0" />-->
-<!--    <PackageReference Include="Moesif.Middleware" Version="3.1.1"/>-->
+<!--    <PackageReference Include="Moesif.Api" Version="3.1.1" />-->
+<!--    <PackageReference Include="Moesif.Middleware" Version="3.1.2"/>-->
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
 

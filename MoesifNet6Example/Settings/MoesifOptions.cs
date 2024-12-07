@@ -103,6 +103,18 @@ namespace MoesifNet6Example.Settings
             }
             return !string.IsNullOrWhiteSpace(appId) && !appId.StartsWith("<");
         }
+
+        public bool IsLambda()
+        {
+            var isLambda = false;
+            try {
+                isLambda = (bool) getMoesifOptions().GetValueOrDefault(MoesifOptionsParamNames.IsLambda);
+            }
+            catch (Exception ex){
+                Console.WriteLine("Error Reading Moesif Application Id in appsettings(.env).json: " + ex.Message );
+            }
+            return isLambda;
+        }
     }
 
     public class MoesifOptionsParamNames
