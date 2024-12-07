@@ -1,5 +1,10 @@
+#define MOESIF_INSTRUMENT
+
 using System;
 using System.Collections.Generic;
+using System.Net;
+using System.Text.Json.Nodes;
+using Amazon.Lambda.APIGatewayEvents;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -29,28 +34,68 @@ namespace MoesifNet6Example
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+#if MOESIF_INSTRUMENT
+            Console.WriteLine($"Begin: Configure");
+#endif
+            var isLambda = false;
             MoesifOptions mo = new MoesifOptions(Configuration);
             ensureValidConfig(mo);
             app.UseMiddleware<MoesifMiddleware>(mo.getMoesifOptions());
+            isLambda = mo.IsLambda();
             
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
+#if MOESIF_INSTRUMENT
+            Console.WriteLine($"Before: Configure / UseRouting");
+#endif
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    await context.Response.WriteAsync("Hello World!");
+                    var msg = $"Hello World! isLambd = {isLambda}"; 
+                    Console.WriteLine($"Hit the home page: {msg}");
+                    // if (isLambda)
+                    // {
+                    //     var response = new APIGatewayProxyResponse
+                    //     {
+                    //         StatusCode = (int)HttpStatusCode.OK,
+                    //         Body = $"Welcome to Home! Request path: /",
+                    //         Headers = new Dictionary<string, string> { { "Content-Type", "text/json" } }
+                    //     };
+                    // }
+                    // else
+                    // {
+                    await context.Response.WriteAsync(new JsonObject
+                    {
+                        ["msg"] = msg,
+                        ["zipcode"] = 94709
+                    }.ToString());
+                    // }
+                });
+
+                endpoints.MapGet("/foo", async context =>
+                {
+                    // var hdrs = new Dictionary<string, string> { { "Content-Type", "text/json" } };
+                    var response = new JsonObject
+                    {
+                        ["StatusCode"] = (int)HttpStatusCode.OK,
+                        ["Body"] = $"Hello from Lambda! Request path: /foo"
+                    };
+                    await context.Response.WriteAsJsonAsync(response);
                 });
 
                 endpoints.MapControllerRoute(
                 name: "api",
                 pattern: "{controller}/{id}");
             });
+
+#if MOESIF_INSTRUMENT
+            Console.WriteLine($"End: Configure");
+#endif
         }
 
         private static void ensureValidConfig(MoesifOptions mo)
