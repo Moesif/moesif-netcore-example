@@ -60,8 +60,9 @@ namespace MoesifNet6Example.Settings
             Dictionary<string, object> moesifOptions = new Dictionary<string, object>
             {
                 {MoesifOptionsParamNames.ApplicationId, getConfigString(MoesifOptionsParamNames.ApplicationId)},
-                {MoesifOptionsParamNames.LocalDebug, getConfigBool(MoesifOptionsParamNames.LocalDebug)},
-                {MoesifOptionsParamNames.LogBody, getConfigBool(MoesifOptionsParamNames.LogBody)},
+                {MoesifOptionsParamNames.LocalDebug, true }, //getConfigBool(MoesifOptionsParamNames.LocalDebug)},
+                {MoesifOptionsParamNames.LogBody, true }, //, getConfigBool(MoesifOptionsParamNames.LogBody)},
+                {MoesifOptionsParamNames.IsLambda, true }, //getConfigBool(MoesifOptionsParamNames.IsLambda)},
                 {MoesifOptionsParamNames.LogBodyOutgoing, getConfigBool(MoesifOptionsParamNames.LogBodyOutgoing)},
                 {MoesifOptionsParamNames.ApiVersion, getConfigString(MoesifOptionsParamNames.ApiVersion)},
                 {MoesifOptionsParamNames.EnableBatching, getConfigBool(MoesifOptionsParamNames.EnableBatching)},
@@ -112,6 +113,10 @@ namespace MoesifNet6Example.Settings
         public static string LocalDebug = "LocalDebug";
         // Read from appsettings.json
         public static string LogBody = "LogBody";
+
+        // Read from appsettings.json
+        public static string IsLambda = "IsLambda";
+
         // Read from appsettings.json
         public static string LogBodyOutgoing = "LogBodyOutgoing";
         // Read from appsettings.json

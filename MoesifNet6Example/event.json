@@ -1,0 +1,18 @@
+{
+    "httpMethod": "POST",
+    "path": "/api/employee",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "queryStringParameters": {},
+    "pathParameters": {},
+    "requestContext": {
+      "identity": {
+        "sourceIp": "127.0.0.1"
+      },
+      "httpMethod": "POST",
+      "resourcePath": "/api/employee"
+    },
+    "body": "{\"id\":123,\"firstName\":\"John\",\"lastName\":\"Doe\",\"dateOfBirth\":\"1990-01-01T00:00:00Z\"}",
+    "isBase64Encoded": false
+  }

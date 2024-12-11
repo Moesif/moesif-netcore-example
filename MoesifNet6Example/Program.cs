@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Amazon.Lambda.AspNetCoreServer.Hosting;
+
 
 namespace MoesifNet6Example
 {
@@ -21,7 +23,8 @@ namespace MoesifNet6Example
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>()
-                    .ConfigureKestrel((context, options) => {
+                    .ConfigureKestrel((context, options) =>
+                    {
                         options.AllowSynchronousIO = true;
                     });
                 });
