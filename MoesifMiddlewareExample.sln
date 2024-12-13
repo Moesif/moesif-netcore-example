@@ -2,12 +2,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoesifNetCore2Example", "MoesifNetCore2Example\MoesifNetCore2Example.csproj", "{836C1D42-EC53-4E93-94BC-CA0234B81FA0}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoesifNetCore3Example", "MoesifNetCore3Example\MoesifNetCore3Example.csproj", "{E7F50E4B-8270-43CC-8470-633542583B17}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoesifNet5Example", "MoesifNet5Example\MoesifNet5Example.csproj", "{C3A7293C-E822-42A5-ACE4-061242842066}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoesifNet8Example", "MoesifNet8Example\MoesifNet8Example.csproj", "{8778A078-D55C-40E4-9AA5-80B002A8FE0A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoesifNet6Example", "MoesifNet6Example\MoesifNet6Example.csproj", "{F248B0AC-68C5-46F8-BA5D-9E275ADC4F08}"
@@ -22,18 +16,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{836C1D42-EC53-4E93-94BC-CA0234B81FA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{836C1D42-EC53-4E93-94BC-CA0234B81FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{836C1D42-EC53-4E93-94BC-CA0234B81FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{836C1D42-EC53-4E93-94BC-CA0234B81FA0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E7F50E4B-8270-43CC-8470-633542583B17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E7F50E4B-8270-43CC-8470-633542583B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E7F50E4B-8270-43CC-8470-633542583B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E7F50E4B-8270-43CC-8470-633542583B17}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C3A7293C-E822-42A5-ACE4-061242842066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3A7293C-E822-42A5-ACE4-061242842066}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C3A7293C-E822-42A5-ACE4-061242842066}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C3A7293C-E822-42A5-ACE4-061242842066}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8778A078-D55C-40E4-9AA5-80B002A8FE0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8778A078-D55C-40E4-9AA5-80B002A8FE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8778A078-D55C-40E4-9AA5-80B002A8FE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU

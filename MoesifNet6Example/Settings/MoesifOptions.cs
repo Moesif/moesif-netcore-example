@@ -59,6 +59,7 @@ namespace MoesifNet6Example.Settings
         {
             Dictionary<string, object> moesifOptions = new Dictionary<string, object>
             {
+                {MoesifOptionsParamNames.IsMoesifEnabled, getConfigBool(MoesifOptionsParamNames.IsMoesifEnabled)},
                 {MoesifOptionsParamNames.ApplicationId, getConfigString(MoesifOptionsParamNames.ApplicationId)},
                 {MoesifOptionsParamNames.LocalDebug, getConfigBool(MoesifOptionsParamNames.LocalDebug)},
                 {MoesifOptionsParamNames.LogBody, getConfigBool(MoesifOptionsParamNames.LogBody)},
@@ -115,6 +116,18 @@ namespace MoesifNet6Example.Settings
             }
             return isLambda;
         }
+
+        public bool IsMoesifEnabled()
+        {
+            var moesifEnabled = true;
+            try {
+                moesifEnabled = (bool) getMoesifOptions().GetValueOrDefault(MoesifOptionsParamNames.IsMoesifEnabled);
+            }
+            catch (Exception ex){
+                Console.WriteLine("Error Reading Moesif Application Id in appsettings(.env).json: " + ex.Message );
+            }
+            return moesifEnabled;
+        }
     }
 
     public class MoesifOptionsParamNames
@@ -132,6 +145,7 @@ namespace MoesifNet6Example.Settings
 
         // Read from appsettings.json
         public static string IsLambda = "IsLambda";
+        public static string IsMoesifEnabled = "IsMoesifEnabled";
 
         // Read from appsettings.json
         public static string LogBodyOutgoing = "LogBodyOutgoing";

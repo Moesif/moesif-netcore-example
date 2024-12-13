@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="Models\" />
+    <Folder Include="Settings\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="$(AspNetCoreAllRuntimeFrameworkVersion)"><IsImplicitlyDefined>true</IsImplicitlyDefined>
+<PrivateAssets>all</PrivateAssets>
+<Publish>true</Publish>
+</PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
+    <PackageReference Include="Moesif.Api" Version="2.0.8" />
+    <PackageReference Include="Moesif.Middleware" Version="1.4.7" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Moesif.Middleware">
+      <HintPath>..\..\moesif-dotnet\Moesif.Middleware\bin\Debug\netstandard2.1\Moesif.Middleware.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
