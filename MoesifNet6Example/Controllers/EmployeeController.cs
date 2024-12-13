@@ -47,15 +47,58 @@ namespace MoesifNet6Example.Controllers
         [HttpGet("delay_random/{id}")]
         public IActionResult GetEventId(int id)
         {
+            Random random = new Random();
+            int sleepTime = 300; // random.Next(1, 101);
+            string lastName = $"Delayed-By-{sleepTime}-MS";
             var employee = new Employee()
             {
                 ID = id,
                 FirstName = $"Get-Event-{id}",
-                LastName = $"Delayed-By-{id}-MS",
+                LastName = lastName,
                 DateOfBirth = DateTime.Now.AddYears(-30)
             };
-            
-            Thread.Sleep(id); // Sleeps for id milliseconds
+
+            Thread.Sleep(sleepTime); // Sleeps for id milliseconds
+        
+            return Ok(employee);
+        }
+        
+        [HttpPost("event/{id}")]
+        public IActionResult PostEventId(int id)
+        {
+            Random random = new Random();
+            int sleepTime = 1600; // random.Next(1, 101);  // 500 - 1000 (Min - Median)
+            string firstName = $"Post-Event-{id}";
+            string lastName = $"Delayed-By-{sleepTime}-MS";
+            var employee = new Employee()
+            {
+                ID = id,
+                FirstName = firstName,
+                LastName = lastName,
+                DateOfBirth = DateTime.Now.AddYears(-30)
+            };
+
+            Thread.Sleep(sleepTime); // Sleeps for id milliseconds
+        
+            return Ok(employee);
+        }
+        
+        [HttpPost("readunread/{id}")]
+        public IActionResult PostReadUnreadId(int id)
+        {
+            Random random = new Random();
+            int sleepTime = 1300; // random.Next(1, 101);  // 200 - 1000
+            string firstName = $"Post-ReadUnRead-{id}";
+            string lastName  = $"Delayed-By-{sleepTime}-MS";
+            var employee = new Employee()
+            {
+                ID = id,
+                FirstName = firstName,
+                LastName = lastName,
+                DateOfBirth = DateTime.Now.AddYears(-30)
+            };
+
+            Thread.Sleep(sleepTime); // Sleeps for id milliseconds
         
             return Ok(employee);
         }
@@ -63,13 +106,16 @@ namespace MoesifNet6Example.Controllers
         [HttpGet("payload75/{id}")]
         public IActionResult GetNotificationId(int id)
         {
-            int sleepTime = 100;
-            string firstName = $"Get-{id}-{MAX_SIZE_75_KB}-KB-{sleepTime}-MS";
+            int sleepTime = 8000; // random.Next(1, 101);  // 300 - 9000
+            var size = 1;
             string lastName = $"Delayed-By-{sleepTime}-MS";
             if (id > 10)
             {
+                size = MAX_SIZE_75_KB;
                 lastName = GenerateLargeResponseBody(MAX_SIZE_75_KB);
             }
+            string firstName = $"Get-{id}-{size}-KB-{sleepTime}-MS";
+            
             var employee = new Employee()
             {
                 ID = id,
@@ -86,13 +132,15 @@ namespace MoesifNet6Example.Controllers
         [HttpGet("payload150/{id}")]
         public IActionResult GetSubsId(int id)
         {
-            int sleepTime = 100; // in ms
-            string firstName = $"Get-{id}-{MAX_SIZE_150_KB}-KB-{sleepTime}-MS";
+            int sleepTime = 3500;  // random.Next(1, 101);  // 300 - 4000
+            var size = 1;
             string lastName = $"Delayed-By-{sleepTime}-MS";
             if (id > 10)
             {
+                size = MAX_SIZE_150_KB;
                 lastName = GenerateLargeResponseBody(MAX_SIZE_150_KB);
             }
+            string firstName = $"Get-{id}-{MAX_SIZE_150_KB}-KB-{sleepTime}-MS";
 
             var employee = new Employee()
             {
