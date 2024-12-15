@@ -44,7 +44,7 @@ namespace MoesifNet6Example
             var msg = "";
             MoesifOptions mo = new MoesifOptions(Configuration);
             ensureValidConfig(mo);
-            
+            app.UseMiddleware<MoesifMiddleware>(mo.getMoesifOptions());
             isLambda = mo.IsLambda();
             isMoesifEnabled = mo.IsMoesifEnabled();
             if (isMoesifEnabled)
@@ -73,7 +73,7 @@ namespace MoesifNet6Example
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    var msg = $"Hello World! isLambda = {isLambda}"; 
+                    var msg = $"Hello World! isLambda = {isLambda}";
                     Console.WriteLine($"Hit the home page: {msg}");
                     // if (isLambda)
                     // {
