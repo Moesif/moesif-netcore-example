@@ -23,9 +23,14 @@
     <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="9.0.0" />
     <PackageReference Include="Amazon.Lambda.Core" Version="2.2.0" />
     <PackageReference Include="Amazon.Lambda.RuntimeSupport" Version="1.10.0" />
-    <PackageReference Include="Moesif.Api" Version="3.1.1" />
-    <PackageReference Include="Moesif.Middleware" Version="3.1.2"/>
+<!--    <PackageReference Include="Moesif.Api" Version="3.1.1" />-->
+<!--    <PackageReference Include="Moesif.Middleware" Version="3.1.2"/>-->
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\moesif-dotnet\Moesif.Middleware\Moesif.Middleware.csproj" />
+    <ProjectReference Include="..\..\moesifapi-csharp\Moesif.Api\Moesif.Api.csproj" />
   </ItemGroup>
 
 <!--   <ItemGroup> -->

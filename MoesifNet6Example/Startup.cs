@@ -19,6 +19,7 @@ namespace MoesifNet6Example
 {
     public class Startup
     {
+        public static int counter = 0;
         public IConfiguration Configuration { get; private set; }
         
         public Startup(IConfiguration configuration)
@@ -34,6 +35,7 @@ namespace MoesifNet6Example
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            counter += 1;
 #if MOESIF_INSTRUMENT
             Console.WriteLine($"Begin: Configure");
 #endif
@@ -55,6 +57,8 @@ namespace MoesifNet6Example
                 msg = $"++++++ Moesif is Disabled because [IsMoesifEnabled = {isMoesifEnabled}] and [IsLambda = {isLambda}]";
             }
             Console.WriteLine($"{msg}");
+            string isoUtcDateString = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ");
+            Console.WriteLine($"[{isoUtcDateString}] **** Moesif-INIT = [{counter}]");
 
             if (env.IsDevelopment())
             {

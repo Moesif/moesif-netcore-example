@@ -109,7 +109,7 @@ namespace MoesifNet6Example.Controllers
             int sleepTime = 8000; // random.Next(1, 101);  // 300 - 9000
             var size = 1;
             string lastName = $"Delayed-By-{sleepTime}-MS";
-            if (id > 10)
+            if (id > 10000)
             {
                 size = MAX_SIZE_75_KB;
                 lastName = GenerateLargeResponseBody(MAX_SIZE_75_KB);
@@ -135,7 +135,7 @@ namespace MoesifNet6Example.Controllers
             int sleepTime = 3500;  // random.Next(1, 101);  // 300 - 4000
             var size = 1;
             string lastName = $"Delayed-By-{sleepTime}-MS";
-            if (id > 10)
+            if (id > 10000)
             {
                 size = MAX_SIZE_150_KB;
                 lastName = GenerateLargeResponseBody(MAX_SIZE_150_KB);
