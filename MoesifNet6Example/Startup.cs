@@ -1,4 +1,4 @@
-#define MOESIF_INSTRUMENT
+// #define MOESIF_INSTRUMENT
 
 using System;
 using System.Collections.Generic;
@@ -19,6 +19,7 @@ namespace MoesifNet6Example
 {
     public class Startup
     {
+        public static int counter = 0;
         public IConfiguration Configuration { get; private set; }
         
         public Startup(IConfiguration configuration)
@@ -34,6 +35,7 @@ namespace MoesifNet6Example
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            counter += 1;
 #if MOESIF_INSTRUMENT
             Console.WriteLine($"Begin: Configure");
 #endif
@@ -42,7 +44,6 @@ namespace MoesifNet6Example
             var msg = "";
             MoesifOptions mo = new MoesifOptions(Configuration);
             ensureValidConfig(mo);
-            
             isLambda = mo.IsLambda();
             isMoesifEnabled = mo.IsMoesifEnabled();
             if (isMoesifEnabled)
@@ -55,6 +56,8 @@ namespace MoesifNet6Example
                 msg = $"++++++ Moesif is Disabled because [IsMoesifEnabled = {isMoesifEnabled}] and [IsLambda = {isLambda}]";
             }
             Console.WriteLine($"{msg}");
+            string isoUtcDateString = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ");
+            Console.WriteLine($"[{isoUtcDateString}] **** Moesif-INIT = [{counter}]");
 
             if (env.IsDevelopment())
             {
@@ -69,7 +72,7 @@ namespace MoesifNet6Example
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    var msg = $"Hello World! isLambda = {isLambda}"; 
+                    var msg = $"Hello World! isLambda = {isLambda}";
                     Console.WriteLine($"Hit the home page: {msg}");
                     // if (isLambda)
                     // {

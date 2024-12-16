@@ -53,6 +53,11 @@ namespace MoesifNet6Example
             stopwatch.Start();
             long dbgTime = 0;
 
+            var hdr = $"AwsRequestId, InvokedFunctionArn, RemainingTime, LogGroupName";
+            var msg = $"{lambdaContext.AwsRequestId}, {lambdaContext.InvokedFunctionArn}, {lambdaContext.RemainingTime}, {lambdaContext.LogGroupName}";
+            _logger.LogInformation(hdr);
+            _logger.LogInformation(msg);
+
             _logger.LogInformation($"Enter handler FunctionHandlerAsync Iteration - {invovationCount}");
             invovationCount += 1;
 
@@ -98,7 +103,7 @@ namespace MoesifNet6Example
             // };
 
             dbgTime = stopwatch.ElapsedMilliseconds;
-            _logger.LogInformation($"EXITING handler FunctionHandlerAsync ExecutionTime - {dbgTime}ms", dbgTime);
+            _logger.LogInformation($"EXITING handler moesifEnable = true FunctionHandlerAsync ExecutionTime - {dbgTime}ms", dbgTime);
             stopwatch.Stop();
 #endif
             return response;
