@@ -1,4 +1,4 @@
-#define MOESIF_INSTRUMENT
+// #define MOESIF_INSTRUMENT
 
 using System;
 using System.Collections.Generic;
@@ -44,7 +44,6 @@ namespace MoesifNet6Example
             var msg = "";
             MoesifOptions mo = new MoesifOptions(Configuration);
             ensureValidConfig(mo);
-            app.UseMiddleware<MoesifMiddleware>(mo.getMoesifOptions());
             isLambda = mo.IsLambda();
             isMoesifEnabled = mo.IsMoesifEnabled();
             if (isMoesifEnabled)
